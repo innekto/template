@@ -1,0 +1,148 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: grey;
+}
+
+
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {}
+
+.page {}
+
+.articles {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+
+    &__container {
+        max-width: 79.375rem;
+        margin: 0 auto;
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+    }
+
+    &__title {
+        font-size: 1.5625rem;
+        margin-bottom: 2.8125rem;
+
+    }
+
+    &__filter {
+        margin-bottom: 1.25rem;
+    }
+
+    &__items {
+        margin: 0 auto;
+        transition: all 0.3s;
+    }
+
+    &__item {
+        width: 25rem;
+
+        &:not(:last-child) {
+            margin-bottom: 1.25rem;
+        }
+    }
+}
+
+.filter-articles {
+
+    display: flex;
+    align-items: center;
+    column-gap: 1.5625rem;
+    row-gap: 0.3125rem;
+    flex-wrap: wrap;
+
+    &__item {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        font-size: 0.75rem;
+        line-height: 2;
+        transition: all 0.3s;
+        color: gray;
+
+        &:hover,
+        &.active {
+            color: black;
+        }
+    }
+}
+
+.active {}
+
+.article {
+
+    &__image {
+        display: block;
+        margin-bottom: 1.875rem;
+        position: relative;
+        border-radius: 3px;
+        // border: 1px solid tomato;
+        overflow: hidden;
+        // padding-bottom: 60%;
+
+
+        &:hover img {
+            transform: scale(1.03);
+        }
+
+        & img.init {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+    }
+
+    &__body {
+        display: grid;
+        gap: 0.9375rem;
+
+    }
+
+    &__date {
+        font-size: 0.75rem;
+        font-weight: 300;
+        line-height: 1.6;
+    }
+
+    &__title {}
+
+    &__link-title {
+        color: rgb(30, 94, 8);
+        line-height: 1.5;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__text {
+        font-size: 0.75rem;
+        font-weight: 300;
+        line-height: 1.6;
+    }
+}
+
+@media(max-width:430px) {
+    .articles__item {
+        width: 100%
+    }
+
+    .articles__items {
+        width: auto !important;
+    }
+}
